@@ -59,8 +59,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/prato_01"
-                tools:srcCompat="@drawable/prato_01" />
+                app:srcCompat="@drawable/prato_01" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/detail_name"
@@ -68,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:gravity="center_horizontal"
-                android:text="detalhe do nome"
+                android:text="nome do prato"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -79,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:gravity="center_horizontal"
-                android:text="Detalhe da descrição"
+                android:text="descrição"
                 android:textColor="@color/gray"
                 android:textSize="18sp" />
 
@@ -89,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:gravity="left"
-                android:text="Detalhe do preço"
+                android:text="preço"
                 android:textColor="@color/Tertiary"
                 android:textSize="18sp" />
         </LinearLayout>

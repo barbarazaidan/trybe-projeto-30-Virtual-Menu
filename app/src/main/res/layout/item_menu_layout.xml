@@ -30,7 +30,7 @@
             android:paddingTop="5dp"
             android:paddingEnd="10dp"
             android:paddingBottom="5dp"
-            android:text="texto do prato"
+            android:text="titulo do prato"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />

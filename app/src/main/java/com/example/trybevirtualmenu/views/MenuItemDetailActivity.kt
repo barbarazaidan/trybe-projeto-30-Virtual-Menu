@@ -1,6 +1,7 @@
 package com.example.trybevirtualmenu.views
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.trybevirtualmenu.R
@@ -10,22 +11,21 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
 
 class MenuItemDetailActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("MenuItemDetailActivity", "onCreate called")
         setContentView(R.layout.activity_menu_item_detail)
 
         val dishId = intent.getIntExtra("dish_id", -1)
-        if (dishId != -1) {
+        if (dishId !== -1) {
             val dish = dishesList.find { it.id == dishId }
             if (dish != null) {
                 updateUIWithDishDetails(dish)
             } else {
-                print("Prato não encontrado")
+                Log.d("MenuItemDetailActivity", "Prato não encontrado")
             }
         } else {
-            print("Id incorreto!")
-            finish()
+            Log.d("MenuItemDetailActivity", "Id incorreto")
         }
 
         val backButton: MaterialButton = findViewById(R.id.detail_back)
@@ -35,7 +35,7 @@ class MenuItemDetailActivity : AppCompatActivity() {
 
     }
 
-    private fun updateUIWithDishDetails(dish: Dish) {
+private fun updateUIWithDishDetails(dish: Dish) {
         // Encontrou o prato, agora atualize as visualizações com os detalhes do prato
 
         val nameDish: TextView = findViewById(R.id.detail_name)

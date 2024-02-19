@@ -1,7 +1,7 @@
 package com.example.trybevirtualmenu.interfaces
 
 import android.content.Intent
-import com.example.trybevirtualmenu.models.dishesList
+import android.view.View
 import com.example.trybevirtualmenu.views.MenuItemDetailActivity
 
 // não posso colocar uma implementação vazia na função, pois assim estou dizendo que
@@ -10,5 +10,5 @@ import com.example.trybevirtualmenu.views.MenuItemDetailActivity
 // ou substituí-la. E aqui eu quero que a função onClick seja obrigatoriamente implementada
 // pelas classes que usam a interface
 interface IClickEventListener {
-    fun onClick(position: Int)
+    fun onClick(itemView: View, position: Int)
 }

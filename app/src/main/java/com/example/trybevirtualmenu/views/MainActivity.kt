@@ -28,9 +28,11 @@ class MainActivity : AppCompatActivity(), IClickEventListener {
     }
 
      override fun onClick(view: View, position: Int) {
-         // Log.d("MainActivity", "Item clicked: ${clickedItem.name}, Dish ID: ${clickedItem.id}")
+         // precisei criar o dishClicked para pegar o id do prato e fazer a lógica
+         // na próxima activity. Do contrário, ele pegava dishId começava em zero
+         val dishClicked = dishesList[position]
          val intent = Intent(baseContext, MenuItemDetailActivity::class.java)
-         intent.putExtra("dish_id", position)
+         intent.putExtra("dish_id", dishClicked.id)
          startActivity(intent)
      }
 }
